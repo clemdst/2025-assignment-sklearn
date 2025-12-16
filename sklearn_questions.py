@@ -178,8 +178,7 @@ class MonthlySplit(BaseCrossValidator):
         self.time_col = time_col
 
     def __repr__(self):
-        """Docstring
-        """
+        """Docstring."""
         return f"MonthlySplit(time_col='{self.time_col}')"
 
     def _extract_times(self, X):
