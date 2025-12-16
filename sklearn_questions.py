@@ -178,6 +178,8 @@ class MonthlySplit(BaseCrossValidator):
         self.time_col = time_col
 
     def __repr__(self):
+        """Docstring
+        """
         return f"MonthlySplit(time_col='{self.time_col}')"
 
     def _extract_times(self, X):
@@ -243,7 +245,6 @@ class MonthlySplit(BaseCrossValidator):
         idx_test : ndarray
             The testing set indices for that split.
         """
-
         times = self._extract_times(X)
         months = times.dt.to_period('M')
         unique_months = sorted(set(months))
